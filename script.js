@@ -5,6 +5,6 @@ evaluatedText.addEventListener("input", updateLetterCount);
 
 function updateLetterCount() {
   const text = evaluatedText.value;
-  const count = text.replace(/\s/g, "").length;
+  const count = text.replace(/\s/g, "").length+1;
   letterCount.textContent = count;
 }
