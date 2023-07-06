@@ -1,9 +1,10 @@
-//your code here
-let typee =document.getElementById('evaluatedText');
-let countbox =document.getElementById('letterCount');
-        let count=0;
-     typee.addEventListener('keypress',()=>{
-		 	count++;
-		 
-		 countbox.textContent = count;
-	 })
+const evaluatedText = document.getElementById("evaluatedText");
+const letterCount = document.getElementById("letterCount");
+
+evaluatedText.addEventListener("input", updateLetterCount);
+
+function updateLetterCount() {
+  const text = evaluatedText.value;
+  const count = text.replace(/\s/g, "").length;
+  letterCount.textContent = count;
+}
